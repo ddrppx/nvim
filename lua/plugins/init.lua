@@ -69,6 +69,13 @@ return require('packer').startup(function(use)
         cmd = "Telescope"
     }
     use { 
+        "williamboman/mason.nvim",
+        config = "require('mason-config')"
+    }
+    use {
+        "williamboman/mason-lspconfig.nvim"
+    }
+    use { 
         'neovim/nvim-lspconfig',
         config = "require('lsp')"
     }
@@ -111,12 +118,5 @@ return require('packer').startup(function(use)
     use {
         'terrortylor/nvim-comment',
         config = "require('comment-config')"
-    }
-    use { 
-        "williamboman/mason.nvim",
-        config = "require('mason-config')"
-    }
-    use {
-        "williamboman/mason-lspconfig.nvim"
     }
 end)
