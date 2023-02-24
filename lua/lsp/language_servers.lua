@@ -31,14 +31,16 @@ require('lspconfig.configs').ls_emmet = {
     };
 }
 
+-- https://github.com/williamboman/mason-lspconfig.nvim#default-configuration
 local langservers = {
     'html',
     'cssls',
-    'tsserver',
-    'pylsp',
-    'ls_emmet'
+    'ls_emmet',
+    'intelephense',
+    'pyright',
+    'tsserver'
 }
-
+--
 for _, server in ipairs(langservers) do 
     require'lspconfig'[server].setup{
         capabilities = capabilities
