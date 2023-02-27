@@ -12,12 +12,12 @@ return require('packer').startup(function(use)
         end
     })
     use {
-        'nvim-lualine/lualine.nvim',
+        'tamton-aquib/staline.nvim',
         requires = {
             'kyazdani42/nvim-web-devicons', opt=true
         },
-        event = "BufWinEnter",
-        config = "require('lualine-config')"
+        event = "BufRead",
+        config = "require('staline-config')"
     }
     use {
         'akinsho/bufferline.nvim',
