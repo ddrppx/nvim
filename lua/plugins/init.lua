@@ -33,6 +33,9 @@ return require('packer').startup(function(use)
       },
       config = "require('nvim-tree-config')"
     }
+    use {
+        'nvim-tree/nvim-web-devicons'
+    }
     -- Treesitter
     use { 
         'nvim-treesitter/nvim-treesitter', 
